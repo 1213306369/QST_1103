@@ -28,8 +28,9 @@ public class FilterByTime {
 			// 对每行进行处理
 			String line = scanner.nextLine();
 			// 切分获取IP，Time
-			String strIp = null;
-			String strTime = null;
+			String [] alt = line.split(" ");
+			String strIp = alt[0];
+			String strTime = alt[3].substring(1,alt[3].length()-1);
 			// 对在时间区间内的数据进行输出
 			System.out.println(strIp + "\t" + strTime);
 		}
